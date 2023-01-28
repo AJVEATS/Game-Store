@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<link type="text/css" rel="stylesheet" href="static/css/templates/index.css">
+<section id="hero" class="hero">
+    <p id="hero-title" class="hero-title">Welcome to Game Store</p>
+    <p id="hero-subtitle" class="hero-subtitle">Your one stop gaming store</p>
+</section>
+<section id="showcase" class="showcase">
+    <p id="showcase-title" class="showcase-title">Our Top Titles</p>
+    <div id="showcase-games" class="showcase-games">
+        {% for games in data[0:4] %}
+            <a class="showcase-game" href={{ games.slug }}>
+                <div id="showcase-game-image-container" class="showcase-game-image-container">
+                    <img src={{ games.image }} />
+                </div>
+                <div id="showcase-game-info" class="showcase-game-info">
+                    <p id="showcase-game-title" class="showcase-game-title">{{ games.name }}</p>
+                    <p id="showcase-game-genre" class="showcase-game-genre"> {{ games.genre }}</p>
+                    <p id="showcase-game-price" class="showcase-game-price">{{ games.price }}</p>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+    <a id="see-more-games" class="see-more-games" href="/games">
+        <p>See all</p>
+        <img src="../static/images/icons/right-arrow.svg" />
+    </a>
+</section>
+<section id="cta-section" class="cta-section">
+    <div id="cta-section-image" class="cta-section-image">
+        <img src="https://c-pl.niceshops.com/upload/image/product/large/default/14336_5e04c7a0.jpg" />
+    </div>
+    <div id="cta-section-info" class="cta-section-info">
+        <p id="cta-section-info-title" class="cta-section-info-title">Join Our Community</p>
+        <p id="cta-section-info-subtext" class="cta-section-info-subtext">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque at lorem sed consectetur. 
+            Fusce viverra sapien nec pellentesque eleifend.
+        </p>
+        <div id="cta-section-cta-container" class="cta-section-cta-container">
+        <div id="cta-section-cta" class="cta-section-cta">
+            <a href="/account">Sign Up</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

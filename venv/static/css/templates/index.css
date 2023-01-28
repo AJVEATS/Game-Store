@@ -1,0 +1,213 @@
+/* 
+  ###################### CSS Imports ######################
+*/
+
+@import url("../imports.css");
+
+/* 
+  ###################### Hero styling ######################
+*/
+
+.hero {
+  background: rgba(0, 0, 0, 0.3) url("../../images/assets/hero-img.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  text-align: center;
+  padding: 8em 0em;
+  color: var(--white);
+}
+
+.hero-title {
+  font-size: 3em;
+  padding-bottom: 0.2em;
+}
+
+.hero-subtitle {
+  font-size: 1.5em;
+}
+
+/* 
+  ###################### Game Showcase styling ######################
+*/
+
+.showcase {
+  width: 80%;
+  margin: 2em auto;
+}
+
+.showcase-title {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.showcase-games {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 1em;
+}
+
+.showcase-game {
+  position: relative;
+  width: 20%;
+  margin: 0 2%;
+  text-decoration: none;
+}
+
+.showcase-game:hover .showcase-game-title {
+  color: var(--white-on-hover);
+}
+
+.showcase-game:hover .showcase-game-image-container {
+  opacity: 0.6;
+}
+
+.showcase-game-image-container {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  aspect-ratio: 3/4;
+  text-align: center;
+}
+
+.showcase-game-image-container img {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  margin: 0;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.showcase-game-info {
+  margin-top: 0.5em;
+  color: var(--black);
+}
+
+.showcase-game-title {
+  font-weight: bold;
+  padding-bottom: 0.2em;
+}
+
+.showcase-game-genre {
+  opacity: 0.7;
+  font-style: italic;
+  padding-bottom: 0.2em;
+}
+
+.see-more-games {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.see-more-games:hover p {
+  color: var(--white-on-hover);
+}
+
+.see-more-games:hover img {
+  filter: invert(75%) sepia(7%) saturate(2109%) hue-rotate(330deg)
+    brightness(92%) contrast(86%);
+}
+
+.see-more-games p {
+  font-size: 1.2em;
+  margin-right: 0.5em;
+}
+
+.see-more-games img {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+/* 
+    ###################### CTA Section styling ######################
+*/
+
+.cta-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: stretch;
+  padding: 2.5em 0;
+}
+
+.cta-section-image {
+  width: 40%;
+  position: relative;
+}
+
+.cta-section-image img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin: 0;
+  vertical-align: middle;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.cta-section-info {
+  width: 40%;
+  color: var(--white);
+  background-color: var(--white-on-hover);
+  padding: 3em;
+  border-radius: 5px;
+}
+
+.cta-section-info-title {
+  font-weight: bold;
+  font-size: 1.75em;
+  margin-bottom: 1em;
+}
+
+.cta-section-info-subtext {
+  margin-bottom: 1em;
+}
+
+.cta-section-cta-container {
+  padding: 1em 0;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.cta-section-cta a {
+  padding: 0.75em 1em;
+  text-align: center;
+  text-decoration: none;
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 5px;
+}
+
+.cta-section-cta a:hover {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+@media screen and (max-width: 1200px) {
+  .cta-section {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .cta-section-image {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .cta-section-info {
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+  }
+}

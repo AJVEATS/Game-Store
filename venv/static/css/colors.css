@@ -1,0 +1,9 @@
+html {
+  /* Colours */
+  --white: #ffffff;
+  --black: #000000;
+  --white-on-hover: #dc9e82;
+  --light-gray: #747474;
+  --test: gray;
+  --red: #ff7f7f;
+}

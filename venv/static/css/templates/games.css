@@ -1,0 +1,80 @@
+/* 
+    ###################### CSS Imports ######################
+*/
+@import url("../imports.css");
+
+/* 
+    ###################### Game Page Title styling ######################
+*/
+
+.games-title-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em 0 1em 0;
+}
+
+.games-title {
+  font-size: 2em;
+}
+
+/* 
+    ###################### Game Page Product styling ######################
+*/
+
+.games {
+  width: 80%;
+  margin: 1.25em auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+
+.game {
+  flex: 0 0 24%;
+  width: 23%;
+  margin-bottom: 1.5em;
+  text-decoration: none;
+}
+
+.game:hover .game-title {
+  color: var(--white-on-hover);
+}
+
+.game:hover .game-image-container {
+  opacity: 0.6;
+}
+
+.game-image-container {
+  width: 80%;
+  position: relative;
+  aspect-ratio: 3/4;
+  text-align: center;
+}
+
+.game-image-container img {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  margin: 0;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.game-info {
+  margin-top: 0.5em;
+  color: var(--black);
+}
+
+.game-title {
+  font-weight: bold;
+  padding-bottom: 0.2em;
+}
+
+.game-genre {
+  opacity: 0.7;
+  font-style: italic;
+  padding-bottom: 0.2em;
+}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% set active_page = "games" %}
+{% block content %}
+<link type="text/css" rel="stylesheet" href="../static/css/templates/game.css">
+{% for game in data[0: 1] %}
+    <section id="game" class="game">
+        <p id="game-title" class="game-title">{{ game.name }}</p>
+        <div id="game-info" class="game-info">
+            <div id="game-info-left" class="game-info-left">
+                <img src={{ game.image }} />
+            </div>
+            <div id="game-info-right" class="game-info-right">
+                <p id="game-description" class="game-description">{{ game.description }}</p>
+                <p id="game-genre" class="game-genre">{{ game.genre }}</p>
+                <p id="game-rating" class="game-rating"><b>Rating:</b> {{ game.age_rating }}</p>
+                <p id="game-release" class="game-release"><b>Released:</b> {{ game.released }}</p>
+                <p id="game-developer" class="game-developer"><b>User Rating:</b> {{ game.rating }}/5</p>
+                <div id="game-buy-button-container" class="game-buy-button-container">
+                    <div id="game-buy-button" class="game-buy-button">
+                        <a onclick="addToCart('{{ game.name }}', '{{ game.price }}')">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endfor %}
+{% endblock %}

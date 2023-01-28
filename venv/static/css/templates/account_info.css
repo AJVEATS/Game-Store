@@ -1,0 +1,66 @@
+/* 
+  ###################### CSS Imports ######################
+*/
+
+@import url("../imports.css");
+
+/* 
+  ###################### Account Info Page Styling ######################
+*/
+
+.account-info-container {
+  width: 80%;
+  margin: 2em auto;
+}
+
+.account-info-title {
+  font-size: 2em;
+  padding-bottom: 0.5em;
+}
+
+.add-game-form-item {
+  margin-bottom: 0.2em;
+}
+
+form > .form-item > label {
+  display: inline-block;
+  text-align: right;
+  min-width: 220px;
+}
+
+form > .form-item > input,
+form > .form-item > select {
+  display: inline-block;
+  min-width: 250px;
+  border: solid 2px var(--light-gray);
+  border-radius: 4px;
+  height: fit-content;
+  font-family: "Gotham";
+  box-sizing: content-box;
+}
+
+.account-info-submit {
+  background-color: var(--white-on-hover);
+  color: var(--white);
+  border: none;
+  font-size: 1em;
+  padding: 1em;
+  margin: 1em;
+  margin-bottom: 0;
+  border-radius: 3px;
+}
+
+.account-info-submit:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/* 
+    ###################### Custom Footer styling ######################
+*/
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 98%;
+}

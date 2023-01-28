@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<link type="text/css" rel="stylesheet" href="../static/css/templates/edit_games.css">
+<section id="edit-game-container" class="edit-game-container">
+    <p class="edit-game-title">Select a game to edit</p>
+    {% for games in data %}
+        <a href="{{ '/edit-game/%s'%games.slug|urlencode }}" class="edit-game-card" >
+            <div class="edit-game-image-container">
+                <img src={{ games.image }} />
+            </div>
+            <div class="edit-game-info-conainter">
+                <p class="edit-game-name">{{ games.name }}</p>
+            </div>
+        </a>
+    {% endfor %}  
+{% endblock %}

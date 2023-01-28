@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% set active_page = "basket" %}
+{% block content %}
+<link type="text/css" rel="stylesheet" href="../static/css/templates/basket.css">
+<section id="basket-template" class="basket-template">
+    <p id="basket-title" class="basket-title">Your basket 🛒</p>
+    <p id="basket-subtitle" class="basket-subtitle">You have {{ data|length }} game(s) in your basket</p>
+    <div id="basket-container" class="basket-container">
+        {% for cartGames in data %}
+            <div id="basket-item" class="basket-item">
+                <a id="basket-game-info" class="basket-game-info" href="{{ cartGames.slug|urlencode }}">
+                    <p class="basket-game-name">{{ cartGames.game }} - {{ cartGames.price }}</p>
+                </a>
+                <a id="basket-buttons" class="basket-buttons" onclick="removeFromBasket('{{ cartGames.game }}', '{{ uid }}')">
+                    <img src="../static/images/icons/bin.svg" />
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+    <p id="basket-total" class="basket-total">Total - £{{ total }}</p>
+    <div id="basket-buttons" class="basket-buttons">
+        <a id="clear-basket" class="clear-basket button" onclick="clearBasket('{{ uid }}')">Clear Basket</a>
+        <script>
+            const order = {userID:'{{ uid }}'};
+            order["total"] = {{ total }}
+            {% for cartGames in data %}
+                order['item_{{ loop.index }}'] = { 
+                    'game': '{{ cartGames.game }}',
+                    'price': '{{ cartGames.price }}'
+                };
+            {% endfor %}
+            console.log(order);
+        </script>
+        <a id="purchase" class="purchase button" onclick="purchase(order)">Checkout</a>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,80 @@
+/* 
+  ###################### CSS Imports ######################
+*/
+
+@import url("../imports.css");
+
+/* 
+    ###################### Basket styling ######################
+*/
+
+.basket-template {
+  width: 80%;
+  margin: 2em auto;
+}
+
+.basket-title {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.basket-subtitle {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.basket-container {
+  margin-bottom: 1.5em;
+}
+
+.basket-item {
+  display: flex;
+  height: fit-content;
+  padding: 1.5em 1em;
+  overflow: hidden;
+  background-color: var(--white-on-hover);
+  border-radius: 4px;
+  margin-bottom: 1em;
+  text-decoration: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.basket-game-info {
+  display: flex;
+  width: 80%;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.basket-game-info > p {
+  align-self: center;
+  color: var(--white);
+}
+
+.basket-buttons {
+  width: 10%;
+  text-align: center;
+}
+
+.basket-buttons > img {
+  width: 35px;
+  height: auto;
+  cursor: pointer;
+}
+
+.basket-total {
+  font-size: 1.7em;
+  width: 100%;
+  text-align: right;
+}
+
+.basket-buttons {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: center;
+  align-items: stretch;
+  justify-content: flex-end;
+}

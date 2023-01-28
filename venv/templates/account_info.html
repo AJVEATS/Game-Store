@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% set active_page = "account" %}
+{% block content %}
+<link type="text/css" rel="stylesheet" href="../static/css/templates/account_info.css">
+<div class="account-info-container">  
+    <p class="account-info-title">Change Your Account Details</p>
+    <form method="POST" action="/account-info">
+        <div class="form-item">
+            <label for="gamertag">Gamertag:</label>
+            {% if user_data == "null"%}
+                <input type="text" id="gamertag" name="gamertag" placeholder="Enter your gamertag" required><br>
+            {% elif user_data != "null" %}
+                {% for user in user_data %}
+                    <input type="text" id="gamertag" name="gamertag" placeholder="{{ user['gamertag'] }}" required><br>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <div class="form-item">
+            <label for="favouriteGame">Favourite Game:</label>
+            <select id="favouriteGame" name="favouriteGame" required>
+                <option value="" disabled selected hidden>Select your favourite game</option>
+                {% for games in data %}
+                    <option value="{{ games.name }}">{{ games.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-item">
+            <label for="favouriteGenre">Genre:</label>
+            <select id="favouriteGenre" name="favouriteGenre" required>
+                <option value="" disabled selected hidden>Select your favourite genre</option>
+                {% for games in data %}
+                    <option value="{{ games.genre }}">{{ games.genre }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-item">
+            <label for="platform">Platform:</label>
+            <select id="platform" name="platform" required>
+                <option value="" disabled selected hidden>Select your platform</option>
+                <option value="Nintendo DS">Nintendo DS</option>
+                <option value="Nintendo Switch">Nintendo Switch</option>
+                <option value="PC">PC</option>
+                <option value="PS4">PS4</option>
+                <option value="PS5">PS5</option>
+                <option value="XBOX One">Xbox One</option>
+                <option value="XBOX Series S">Xbox Series S</option>
+                <option value="XBOX Series X">Xbox Series X</option>
+            </select>
+        </div>
+        <input type="submit" id="account-info-submit" class="account-info-submit" value="Update Info">
+    </form>
+</div>
+{% endblock %}

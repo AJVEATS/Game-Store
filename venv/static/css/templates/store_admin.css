@@ -1,0 +1,79 @@
+/* 
+  ###################### CSS Imports ######################
+*/
+
+@import url("../imports.css");
+
+/* 
+  ###################### Admin section styling ######################
+*/
+
+.store-admin-container {
+  width: 90%;
+  margin: 2.5em auto;
+}
+
+.admin-title {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.add-game-form-item {
+  margin-bottom: 0.2em;
+}
+
+form > .form-item > label {
+  display: inline-block;
+  text-align: right;
+  min-width: 220px;
+}
+
+form > .form-item > input,
+form > .form-item > textarea {
+  display: inline-block;
+  min-width: 220px;
+  border: solid 2px var(--light-gray);
+  border-radius: 4px;
+  height: fit-content;
+  font-family: "Gotham";
+}
+
+.add-game-container {
+  padding-bottom: 2em;
+}
+
+.delete-game-container {
+  margin-bottom: 2em;
+}
+
+.edit-games-link {
+  font-size: 1.5em;
+  color: var(--black);
+}
+
+.edit-games-link:hover {
+  color: var(--white-on-hover);
+}
+
+.button {
+  margin-top: 1em;
+}
+
+/* 
+  ###################### Edit game section styling ######################
+*/
+
+.edit-game-container {
+  width: 90%;
+  margin: 1.5em auto;
+}
+
+/* 
+    ###################### Custom Footer styling ######################
+*/
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 98%;
+}

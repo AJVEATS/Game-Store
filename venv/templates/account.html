@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% set active_page = "account" %}
+{% block content %}
+<div id="account-page" class="account-page">
+    <p id="account-page-title" class="account-page-title">Your Account</p>
+    <link type="text/css" rel="stylesheet" href="static/css/templates/account.css">
+    <section id="user-details" class="user-details">
+        {% if data == "null" %}
+            <p>No user details</p>
+        {% elif data != "null" %}
+            {% for user in data %}
+                <div id="user-details-item" class="user-details-item">
+                    <p id="user-detail-label" class="user-detail-label">Name:&emsp;</p>
+                    <p>{{ user['name'] }}</p>
+                </div>
+                <div id="user-details-item" class="user-details-item">
+                    <p id="user-detail-label" class="user-detail-label">E-mail:&emsp;</p>
+                    <p>{{ user['email'] }}</p>
+                </div>
+                <div id="user-details-item" class="user-details-item">
+                    <p id="user-detail-label" class="user-detail-label">Favourite Game:&emsp;</p>
+                    <p>{{ user['favouriteGame'] }}</p>
+                </div>
+                <div id="user-details-item" class="user-details-item">
+                    <p id="user-detail-label" class="user-detail-label">Favourite Genre:&emsp;</p>
+                    <p>{{ user['favouriteGenre'] }}</p>
+                </div>
+                <div id="user-details-item" class="user-details-item">
+                    <p id="user-detail-label" class="user-detail-label">Gamertag:&emsp;</p>
+                    <p>{{ user['gamertag'] }}</p>
+                </div>
+                <div id="user-details-item" class="user-details-item">
+                    <p id="user-detail-label" class="user-detail-label">Platform:&emsp;</p>
+                    <p>{{ user['platform'] }}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </section>
+    <a id="orders" class="button" href="/orders">Your Orders</a>
+    <a id="account-info" class="button" href="/account-info">Change info</a>
+    {% if user_data != "null" %}
+        <form class="delete-user-info-form">
+            <input type="hidden" id="uid" name="uid" value="{{user_data['user_id']}}">
+            <input type="button" id="account-info" class="button" onclick="deleteUserInfo()" value="Delete Info">
+        </form>
+    {% endif %}
+    <button id="sign-out" class="button" hidden=true>Sign Out</button>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% set active_page = "account" %}
+{% block content %}
+<link type="text/css" rel="stylesheet" href="../static/css/templates/orders.css">
+<section id="orders-page" class="orders-page">
+    <p id="order-page-title" class="order-page-title">Your Orders</p>
+    <div id="orders-container" class="orders-container">
+        {% for orders in data %}
+            <div id="order-card" class="order-card">
+                <p>Order placed {{ orders.timestamp.strftime('%d-%m-%Y') }}</p>
+                <p>{{ orders.item_1.price }} - {{ orders.item_1.game }}</p>
+                {% if ( orders|length - 6 ) == 2 %}
+                    <p>{{ orders.item_2.price }} - {{ orders.item_2.game }}</p>
+                {% elif ( orders|length - 6 ) == 3 %}
+                    <p>{{ orders.item_2.price }} - {{ orders.item_2.game }}</p>
+                    <p>{{ orders.item_3.price }} - {{ orders.item_3.game }}</p>
+                {% elif ( orders|length - 6 ) == 4 %}
+                    <p>{{ orders.item_2.price }} - {{ orders.item_2.game }}</p>
+                    <p>{{ orders.item_3.price }} - {{ orders.item_3.game }}</p>
+                    <p>{{ orders.item_4.price }} - {{ orders.item_4.game }}</p>
+                {% elif ( orders|length - 6 ) == 5 %}
+                    <p>{{ orders.item_2.price }} - {{ orders.item_2.game }}</p>
+                    <p>{{ orders.item_3.price }} - {{ orders.item_3.game }}</p>
+                    <p>{{ orders.item_4.price }} - {{ orders.item_4.game }}</p>
+                    <p>{{ orders.item_5.price }} - {{ orders.item_5.game }}</p>
+                {% endif %}
+                <p>Order Total - £{{ orders.total }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+    
+{% endblock %}

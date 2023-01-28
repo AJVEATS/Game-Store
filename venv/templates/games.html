@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% set active_page = "games" %}
+{% block content %}
+<link type="text/css" rel="stylesheet" href="../static/css/templates/games.css">
+<div id="games-title-container" class="games-title-container">
+    <p id="games-title" class="games-title">All Games</p>
+</div>
+<section id="games" class="games">
+    {% for games in data %}
+        <a class="game" href={{ games.slug }}>
+            <div id="game-image-container" class="game-image-container">
+                <img src={{ games.image }} />
+            </div>
+            <div id="game-info" class="game-info">
+                <p id="game-title" class="game-title">{{ games.name }}</p>
+                <p id="game-genre" class="game-genre">{{ games.genre }}</p>
+                <p id="game-price" class="game-price">{{ games.price }}</p>
+            </div>
+        </a>
+    {% endfor%}
+</section>
+{% endblock %}

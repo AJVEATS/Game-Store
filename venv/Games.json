@@ -1,0 +1,49 @@
+[{
+  "_id": {
+    "$oid": "637e1ca1304d5ee3fd95f1f7"
+  },
+  "ID": "1",
+  "slug": "grand-theft-auto-v",
+  "name": "Grand Theft Auto V",
+  "released": "2013-09-17",
+  "genre": "Open World",
+  "rating": "5",
+  "age_rating": "18+",
+  "image": "https://media.rawg.io/media/games/456/456dea5e1c7e3cd07060c14e96612001.jpg"
+},{
+  "_id": {
+    "$oid": "637e1d46304d5ee3fd95f1f9"
+  },
+  "ID": "2",
+  "slug": "the-witcher-3-wild-hunt",
+  "name": "The Witcher 3: Wild Hunt",
+  "released": "2015-05-18",
+  "genre": "Fantasy",
+  "rating": "4.82",
+  "age_rating": "18+",
+  "image": "https://media.rawg.io/media/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg"
+},{
+  "_id": {
+    "$oid": "637e1d8e304d5ee3fd95f1fa"
+  },
+  "ID": "3",
+  "slug": "portal-2",
+  "name": "Portal 2",
+  "released": "2011-04-18",
+  "genre": "Puzzle",
+  "rating": "4.62",
+  "age_rating": "12+",
+  "image": "https://media.rawg.io/media/games/328/3283617cb7d75d67257fc58339188742.jpg"
+},{
+  "_id": {
+    "$oid": "637e1dae304d5ee3fd95f1fb"
+  },
+  "ID": "4",
+  "slug": "tomb-raider",
+  "name": "Tomb Raider (2013)",
+  "released": "2013-03-05",
+  "genre": "Adventure",
+  "rating": "4.62",
+  "age_rating": "16+",
+  "image": "https://media.rawg.io/media/games/021/021c4e21a1824d2526f925eff6324653.jpg"
+}]

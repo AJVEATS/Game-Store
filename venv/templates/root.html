@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-tofit=no">
+    <meta name="author" content="Alexander Veats">
+    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/microsoft/319/joystick_1f579-fe0f.png">
+    <title>Game Store</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/templates/base.css">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.5.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.5.0/firebase-ui-auth.css">
+</head>
+<body>
+    <section id="nav-bar" class="nav-bar">
+        <div id="nav-bar-branding" class="nav-bar-branding">
+            <div id="nav-bar-logo" class="nav-bar-logo-container">
+                <img id="nav-bar-logo" src="../../static/images/logo/navBar.svg">
+            </div>
+            <p id="nav-bar-title" class="nav-bar-title">Game Store</p>
+        </div>
+    </section>
+    <div id="firebaseui-auth-container" style="padding-top: 2em;"></div>
+    <button id="sign-out" hidden=true style="display: none !important;">Sign Out</button>
+    <footer id="footer" class="footer" style="bottom: 0; position: absolute; width: 97.6%;">
+        <div id="footer-top" class="footer-top">
+            <div id="footer-branding" class="footer-branding">
+                <div id="footer-logo-container" class="footer-logo-container">
+                    <img id="footer-logo" src="../../static/images/logo/navBar.svg">
+                </div>
+                <p id="footer-title" class="footer-title">Game Store</p>
+            </div>
+            <div id="footer-socials" class="footer-socials">
+                <a class="footer-social-link" href="mailto:gamestore@email.com" target="_blank"><img
+                        src="../static/images/footer/email.svg"></a>
+                <a class="footer-social-link" href="https://www.facebook.com/" target="_blank"><img
+                        src="../static/images/footer/facebook.svg"></a>
+                <a class="footer-social-link" href="https://www.instagram.com/" target="_blank"><img
+                        src="../static/images/footer/instagram.svg"></a>
+                <a class="footer-social-link" href="https://twitter.com/" target="_blank"><img
+                        src="../static/images/footer/twitter.svg"></a>
+                <a class="footer-social-link" href="https://www.youtube.com/" target="_blank"><img
+                        src="../static/images/footer/youtube.svg"></a>
+                <a class="footer-social-link" href="https://www.twitch.tv/" target="_blank"><img
+                        src="../static/images/footer/twitch.svg"></a>
+            </div>
+        </div>
+        <p id="footer-copyright" class="footer-copyright">Copyright 2022 © Game Store</p>
+    </footer>
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script>
+    // Web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyCElvhEVL_vvaKofYts8_tnUIR2UYerm-Y",
+        authDomain: "game-store-ad.firebaseapp.com",
+        projectId: "game-store-ad",
+        storageBucket: "game-store-ad.appspot.com",
+        messagingSenderId: "439396487755",
+        appId: "1:439396487755:web:79ca02c1ff2408c034f3ce"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.auth().onAuthStateChanged(function(user) {
+        if(user) {
+            console.log(`Signed in as ${user.displayName} (${user.email})`);  
+            user.getIdToken().then(function (token) {
+                document.cookie = "token=" + token;
+            });
+            window.location.replace("/home");
+        }
+    });
+</script>
+</html>

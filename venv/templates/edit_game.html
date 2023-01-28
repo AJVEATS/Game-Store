@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<link type="text/css" rel="stylesheet" href="../static/css/templates/store_admin.css">
+<section id="edit-game-container" class="edit-game-container">
+    {% for game in data[0: 1] %}
+        <p>Edit {{ game.name }}</p>
+        <form method="POST">
+            <div class="form-item">
+                <label for="gameSlug">Game Slug:</label>
+                <input type="text" id="gameSlug" name="gameSlug" value={{ game.slug }} required><br>
+            </div>
+            <div class="form-item">
+                <label for="gameName">Game Name:</label>
+                <textarea type="text" id="gameName" name="gameName" required>{{ game.name }}</textarea><br>
+            </div>
+            <div class="form-item">
+                <label for="gameReleaseDate">Game Release Date:</label>
+                <input type="date" id="gameReleaseDate" name="gameReleaseDate" value={{ game.released }} rows="5" cols="33" required><br>
+            </div>
+            <div class="form-item">
+                <label for="gameGenre">Game Genre:</label>
+                <input type="text" id="gameGenre" name="gameGenre" value={{ game.genre }} required><br>
+            </div>
+            <div class="form-item">
+                <label for="gameRating">Game Rating:</label>
+                <input type="text" id="gameRating" name="gameRating" value={{ game.rating }} required><br>
+            </div>
+            <div class="form-item">
+                <label for="gameAgeRating">Game Age Rating:</label>
+                <input type="text" id="gameAgeRating" name="gameAgeRating" value={{ game.age_rating }} required><br>
+            </div>
+            <div class="form-item">
+                <label for="gameImage">Game Image:</label>
+                <input type="url" id="gameImage" name="gameImage" value={{ game.image }} ><br>
+            </div>
+            <div class="form-item">
+                <label for="gamePrice">Game Price:</label>
+                <input type="text" id="gamePrice" name="gamePrice" value={{ game.price }} required><br>
+            </div>
+            <div class="form-item">
+                <label for="gameDescription">Game Description:</label>
+                <textarea type="text" id="gameDescription" name="gameDescription" required>{{ game.description }}</textarea><br>
+            </div>
+            <input type="submit" class="button" value="{{'Update %s'%game.name}}">
+        </form>
+    {% endfor %} 
+            
+{% endblock %}

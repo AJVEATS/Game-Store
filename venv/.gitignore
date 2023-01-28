@@ -1,0 +1,7 @@
+# The .gitignore file, files that are excluded from git 
+__pycache__/
+Include/
+Lib/
+Scripts/
+pyvenv.cfg
+application_default_credentials.json

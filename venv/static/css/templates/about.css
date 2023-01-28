@@ -1,0 +1,35 @@
+/* 
+  ###################### CSS Imports ######################
+*/
+
+@import url("../imports.css");
+
+/* 
+  ###################### About Page Styling ######################
+*/
+
+.about {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em 0;
+}
+
+.about-title {
+  font-size: 3em;
+}
+
+.about-content {
+  padding-top: 1em;
+  font-size: 1em;
+  color: var(--black);
+}
+
+/* 
+    ###################### Custom Footer styling ######################
+*/
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 98%;
+}

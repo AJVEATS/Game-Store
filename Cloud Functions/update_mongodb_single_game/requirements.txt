@@ -1,0 +1,6 @@
+# Function dependencies, for example:
+# package>=version
+pymongo==4.3.3
+dnspython
+functions-framework==3.2.0
+requests

@@ -1,0 +1,32 @@
+/* 
+  ###################### CSS Imports ######################
+*/
+
+@import url("../imports.css");
+
+/* 
+    ###################### Orders styling ######################
+*/
+
+.orders-page {
+  width: 80%;
+  margin: 2em auto;
+}
+
+.order-page-title {
+  font-size: 2em;
+}
+
+.orders-container {
+  margin-top: 2em;
+}
+
+.order-card {
+  width: 100%;
+  height: auto;
+  background-color: var(--white-on-hover);
+  border-radius: 4px;
+  color: var(--white);
+  padding: 1em;
+  margin-bottom: 1em;
+}

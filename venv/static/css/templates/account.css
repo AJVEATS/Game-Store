@@ -1,0 +1,64 @@
+/* 
+  ###################### CSS Imports ######################
+*/
+@import url("../imports.css");
+/* 
+  ###################### Account Page Styling ######################
+*/
+.account-page {
+  width: 80%;
+  margin: 1em auto;
+}
+
+.account-page-title {
+  font-size: 1.5em;
+  margin-top: 1em;
+}
+
+#button:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.button {
+  background-color: var(--white-on-hover);
+  color: var(--white);
+  border: none;
+  font-size: 1em;
+  padding: 1em;
+  margin: 1em;
+  margin-left: 0;
+  border-radius: 3px;
+}
+
+.user-details {
+  background-color: var(--white-on-hover);
+  color: var(--white);
+  padding: 1em;
+  border-radius: 4px;
+  margin-top: 1em;
+}
+
+.user-details-item {
+  display: flex;
+}
+
+.user-detail-label {
+  font-weight: bold;
+  width: 10em;
+}
+
+.delete-user-info-form {
+  width: fit-content;
+  display: inline-block;
+}
+
+/* 
+    ###################### Custom Footer styling ######################
+*/
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 98%;
+}

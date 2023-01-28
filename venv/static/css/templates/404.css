@@ -1,0 +1,15 @@
+/* 
+  ###################### CSS Imports ######################
+*/
+
+@import url("../imports.css");
+
+/* 
+  ###################### 404 error page styling ######################
+*/
+
+.error-text {
+  margin: 2em 0;
+  font-size: 2em;
+  text-align: center;
+}

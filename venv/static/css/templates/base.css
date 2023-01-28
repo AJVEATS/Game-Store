@@ -1,0 +1,103 @@
+/* 
+  ###################### CSS Imports ######################
+*/
+
+@import url("../imports.css");
+
+/* 
+    ###################### Nav bar styling ######################
+*/
+
+.nav-bar {
+  background-color: var(--black);
+  padding: 1em 1.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-bar-branding {
+  display: flex;
+}
+
+.nav-bar-title {
+  color: var(--white);
+  font-size: 1.7em;
+  margin: auto 0 auto 0.5em;
+}
+
+.nav-bar-links {
+  margin: auto 0;
+}
+
+.nav-bar-link {
+  color: var(--white);
+  text-decoration: none;
+  margin-right: 1em;
+  font-size: 1.2em;
+}
+
+.nav-bar-link:hover {
+  color: var(--white-on-hover);
+}
+
+.nav-bar-links .active-page {
+  color: var(--white-on-hover);
+}
+
+/* 
+    ###################### Footer styling ######################
+*/
+
+.footer {
+  display: block;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 1em;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-branding {
+  display: flex;
+  padding: 1em 1.5em;
+}
+
+.footer-title {
+  font-size: 1.5em;
+  margin: auto 0 auto 0.5em;
+}
+
+.footer-socials {
+  display: flex;
+  padding: 1em 1.5em;
+}
+
+.footer-social-link {
+  margin-right: 1em;
+}
+
+.footer-social-link img {
+  margin: auto 0;
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
+  width: 32px;
+  height: 32px;
+}
+
+.footer-social-link img:hover {
+  filter: invert(75%) sepia(7%) saturate(2109%) hue-rotate(330deg)
+    brightness(92%) contrast(86%);
+}
+
+.footer-copyright {
+  margin-left: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+@media screen and (max-width: 1200px) {
+  .footer-socials {
+    flex-wrap: wrap;
+  }
+}

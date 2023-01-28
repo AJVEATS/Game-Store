@@ -1,0 +1,120 @@
+/* 
+  ###################### CSS Imports ######################
+*/
+
+@import url("../imports.css");
+
+/* 
+    ###################### Game styling ######################
+*/
+
+.game {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em 0 0 0;
+}
+
+.game-title {
+  font-size: 2em;
+  padding-bottom: 1em;
+}
+
+.game-info {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+.game-info-left {
+  width: 30%;
+}
+
+.game-info-left img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.game-info-right {
+  width: 68%;
+  padding: 0 1em 1em 1em;
+  box-sizing: border-box;
+}
+
+.game-description {
+  padding-bottom: 1em;
+}
+
+.game-genre {
+  padding-bottom: 1em;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.game-rating {
+  padding-bottom: 1em;
+}
+
+.game-release {
+  padding-bottom: 1em;
+}
+
+.game-developer {
+  padding-bottom: 1em;
+}
+
+.game-publisher {
+  padding-bottom: 1em;
+}
+
+.game-buy-button-container {
+  padding: 1em 0;
+  width: fit-content;
+  display: inline-block;
+  padding-bottom: 1.5em;
+}
+
+.game-buy-button a {
+  padding: 0.75em 1em;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--black);
+  border-radius: 4px;
+}
+
+.game-buy-button:hover a {
+  background-color: var(--white-on-hover);
+}
+
+.game-favourite-button-container {
+  padding: 1em 0;
+  width: fit-content;
+  display: inline-block;
+}
+
+.game-favourite-button a {
+  padding: 0.75em 3em;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--red);
+  border-radius: 4px;
+}
+
+.game-favourite-button:hover a {
+  background-color: var(--white-on-hover);
+}
+
+/* 
+    ###################### Custom Footer styling ######################
+*/
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 98%;
+}
