@@ -8,7 +8,7 @@ import json
 
 def get_mongodb_single_game(request):
     cluster = MongoClient(
-        "mongodb+srv://AJVEATS:alexTest@gamestoredb.gaxxodr.mongodb.net/?retryWrites=true&w=majority"
+        "######"
     )
     db = cluster["GameStoreDB"]
     collection = db["Games"]
