@@ -30,7 +30,7 @@ app = Flask(__name__)
 app.config["SECRET_KEY"] = "6333292761132459"
 
 # MonogoDB Connection for the Games collection in the GameStoreDB cluster
-cluster = MongoClient("mongodb+srv://AJVEATS:alexTest@gamestoredb.gaxxodr.mongodb.net/?retryWrites=true&w=majority")
+cluster = MongoClient("######")
 db = cluster["GameStoreDB"]
 collection = db["Games"]
 
